@@ -1,0 +1,30 @@
+BigInteger 用法
+常量
+BigInteger.ONE
+BigInteger.ZERO
+BigInteger.TEN
+
+x.valueOf(long val)
+
+加减乘除
+x.add(y) 
+x.subtract(y)
+x.multiply(y)
+x.divide(y)
+
+取模，取负
+x.mod(y)
+x.negate()
+
+相等，比较
+x.equals(y)
+x.compareTo(y)  ->  {-1,0,1}
+输入输出方式
+
+//文件
+Scanner cin = new Scanner(new BufferedReader(new FileReader("xxx.in")));
+PrintWriter cout = new PrintWriter(new FileWriter("xxx.out"));
+//设置Scanner
+Scanner cin = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+
+
