@@ -61,11 +61,11 @@ struct CIRU{
                     cnt+=v[j].second;
                     flt a1=v[j].first,a2=v[j+1].first;
                     if(cnt==0 && a2-a1>EPS){
+						//只算面积时可以只用下一行注释内的替换后面的所有
+                        //area += r[i] * ((a2-a1)*r[i] + y[i]*(cos(a1)-cos(a2)) + x[i]*(sin(a2)-sin(a1)));
                         flt x1=x[i]+r[i]*cos(a1), y1=y[i]+r[i]*sin(a1);
                         flt x2=x[i]+r[i]*cos(a2), y2=y[i]+r[i]*sin(a2);
                         flt s_poly = x1*y2-x2*y1; //被包围的多边形面积
-                        //只算面积时可以只用下一行注释内的替换后面的所有
-                        //area += r[i] * (y[i]*(cos(a1)-cos(a2)) + x[i]*(sin(a2)-sin(a1)));
                         flt s_fan  = (a2-a1)*sqr(r[i]); //扇形面积
                         flt s_tri  = -sin(a2-a1)*sqr(r[i]); //扇形内的三角形面积，注意是负的
                         area+=s_poly+s_fan+s_tri;
