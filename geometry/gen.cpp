@@ -16,10 +16,10 @@ typedef vector<pii> vpii;
 #define Y second
 int main(){
     srand(time(0));
-    int T=1000;
+    int T=1;
     while(T--){
         int n;
-        n=1000;
+        n=100000;
         printf("%d\n", n);
         REP(i,n)printf("%d %d %d\n", rand(), rand(), rand());
     }
