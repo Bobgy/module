@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define rer(i,L,R) for(int i=int(L);i<=int(R);++i)
-#define pb push_back
 typedef pair<int,int> pii;
 
 const double EPS=1e-9, INF=1e9;
-const int DIM=3, MAXN=112345;
+const int DIM=3;
 
 template <class T> T sqr(T x) {return x*x;}
 
@@ -87,7 +85,7 @@ struct ClosestPair {
         u.clear();
         for(int i=l; i<=r; ++i)
             if (fcmp(abs(v[i][dim]-v[m][dim]) - min_dis) <= 0) {
-                u.pb(v[i]);
+                u.push_back(v[i]);
             }
 
         sort(u.begin(), u.end(), Comp(dim+1));
